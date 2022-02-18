@@ -1,0 +1,41 @@
+.backfill {
+  background-color: #ec2044;
+  height: 15rem;
+  text-align: center;
+}
+
+.chefTitle {
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  width: 50%;
+  margin-left: 25rem;
+}
+
+.chefImage {
+  height: 100%;
+  width: 100%;
+}
+
+.column {
+  flex: 50%;
+  height: 20rem;
+  background-color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50ch;
+}
+
+.pad {
+  padding: 2rem;
+}
+
+.textLeft {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: bold;
+}
