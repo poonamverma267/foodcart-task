@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/layout/Header";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import Caraousel from "./components/UI/Caraousel";
+import Carousel from "./components/Carousel";
 import ChefWeek from "./components/ChefWeek";
 import CuisineList from "./components/CuisineList";
 import pageData from "./components/data.json";
@@ -41,9 +41,7 @@ function App() {
         {loaded && <CuisineList Cuisines={pageitems.cuisine_list} />}
       </section>
 
-      {/* <section>
-        <Caraousel></Caraousel>  
-        </section> */}
+      {loaded && <Carousel PopFood={pageitems.popularweek} />}
       {loaded && <ChefWeek Chef={pageitems.chefweek} />}
       <Footer></Footer>
     </div>

@@ -1,7 +1,6 @@
 import classes from "./ChefWeek.module.css";
 
 const ChefWeek = (props) => {
-  console.log(props.Chef[0]);
   const chef = props.Chef[0];
   const url = "http://63.142.251.101:3000/" + chef.chefprofile;
   return (
