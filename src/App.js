@@ -6,6 +6,8 @@ import Caraousel from "./components/UI/Caraousel";
 import ChefWeek from "./components/ChefWeek";
 import CuisineList from "./components/CuisineList";
 import pageData from "./components/data.json";
+import Icons from "./components/layout/Icons";
+import Footer from "./components/layout/Footer";
 
 function App() {
   const [pageitems, setPageitems] = useState([]);
@@ -43,6 +45,7 @@ function App() {
         <Caraousel></Caraousel>  
         </section> */}
       {loaded && <ChefWeek Chef={pageitems.chefweek} />}
+      <Footer></Footer>
     </div>
   );
 }
