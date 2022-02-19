@@ -17,7 +17,7 @@
   position: relative;
   text-align: center;
   margin: 0;
-  padding: 0;
+
   border: 0;
   font-size: 20px;
   font: inherit;
@@ -27,7 +27,7 @@
   position: relative;
   display: inline-block;
   margin: 0;
-  padding: 0;
+
   border: 0;
   font-size: 100%;
   font: inherit;
@@ -44,6 +44,7 @@
   text-align: center;
   box-sizing: border-box;
   display: block;
+  height: 5rem;
 }
 .row {
   display: flex;
@@ -54,6 +55,7 @@
   background: #1f2933;
   color: aliceblue;
   text-align: center;
+  font-size: 0.75rem;
 }
 .li {
   font-size: xx-large;
@@ -69,8 +71,8 @@
 a {
   text-decoration: none;
   font-style: normal;
-  font-weight: 500;
-  font-size: 15.63px;
+  font-weight: 200;
+  font-size: 0.75rem;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
@@ -93,12 +95,17 @@ a {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  padding: 5rem 0 2rem 0;
 }
 .social li {
-  margin: 0 1em;
+  margin: 0 1em 0 0;
   border: 0;
   font: inherit;
   vertical-align: baseline;
   display: block;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.red {
+  color: red;
 }

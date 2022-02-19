@@ -4,10 +4,20 @@ import classes from "./FooterStyles.module.css";
 const Footer = () => {
   return (
     <footer className={classes.footer}>
-      <section></section>
+      <ul className={classes.social}>
+        <li>
+          <FaFacebook />
+        </li>
+        <li>
+          <FaInstagram />
+        </li>
+        <li>
+          <FaTwitter />
+        </li>
+      </ul>
       <ul className={classes.footermenu}>
         <li>
-          <a href="#" className={classes.a1}>
+          <a href="#" className={classes.red}>
             Home
           </a>
         </li>
@@ -32,19 +42,6 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <section className={classes.row}>
-        <ul className={classes.social}>
-          <li>
-            <FaFacebook />
-          </li>
-          <li>
-            <FaInstagram />
-          </li>
-          <li>
-            <FaTwitter />
-          </li>
-        </ul>
-      </section>
       <div className={classes.lastdiv}>
         All Rights Are Reserved © 2021 Lokal Grub | Designed by Cart Geek
       </div>
