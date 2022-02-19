@@ -13,8 +13,8 @@ body {
 
 .glide__slide {
   text-align: center;
-  height: 250px;
-  line-height: 200px;
+  height: 400px;
+
   color: #fff;
   background: white;
   font-size: 1em;
@@ -58,4 +58,39 @@ body {
 .titleText {
   font-size: 2rem;
   font-weight: bold;
+}
+
+.dishContent {
+  color: black;
+  line-height: 1rem;
+}
+
+.dishTitle {
+  font-weight: bold;
+}
+
+.dishChef {
+  font-weight: normal;
+}
+
+.dishRating {
+  font-weight: normal;
+}
+
+.w3-badge,
+.w3-tag {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.75rem;
+}
+.w3-badge {
+  border-radius: 50%;
+}
+.w3-red,
+.w3-hover-red:hover {
+  color: #fff !important;
+  background-color: #f44336 !important;
 }
