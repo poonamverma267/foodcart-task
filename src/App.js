@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/layout/Header";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import Carousel from "./components/Carousel";
+import PopularDish from "./components/PopularDish";
 import ChefWeek from "./components/ChefWeek";
 import CuisineList from "./components/CuisineList";
 import pageData from "./components/data.json";
@@ -14,24 +14,24 @@ function App() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // fetch("http://63.142.251.101:3000/mymenu-data", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Accept: "application/json",
-    //   },
-    //   type: "jsonp",
-    // })
-    //   .then((response) => response.json())
-    //   .then((response) => {
-    //     const transformedCusines = response.data;
-    //     setPageitems(transformedCusines);
-    //     setLoaded(true);
-    //     console.log(response.data);
-    //   });
-    const transformedCusines = pageData.data;
-    setPageitems(transformedCusines);
-    setLoaded(true);
+    fetch("http://63.142.251.101:3000/mymenu-data", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      type: "jsonp",
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        const transformedCusines = response.data;
+        setPageitems(transformedCusines);
+        setLoaded(true);
+        //console.log(response.data);
+      });
+    // const transformedCusines = pageData.data;
+    // setPageitems(transformedCusines);
+    // setLoaded(true);
   }, []);
 
   return (
@@ -41,7 +41,7 @@ function App() {
         {loaded && <CuisineList Cuisines={pageitems.cuisine_list} />}
       </section>
 
-      {loaded && <Carousel PopFood={pageitems.popularweek} />}
+      {loaded && <PopularDish PopFood={pageitems.popularweek} />}
       {loaded && <ChefWeek Chef={pageitems.chefweek} />}
       <Footer></Footer>
     </div>
