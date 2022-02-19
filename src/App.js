@@ -5,8 +5,6 @@ import { useEffect } from "react";
 import PopularDish from "./components/PopularDish";
 import ChefWeek from "./components/ChefWeek";
 import CuisineList from "./components/CuisineList";
-import pageData from "./components/data.json";
-import Icons from "./components/layout/Icons";
 import Footer from "./components/layout/Footer";
 
 function App() {

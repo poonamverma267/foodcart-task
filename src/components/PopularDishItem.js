@@ -1,4 +1,3 @@
-//import "./PopularDish.css";
 const PopularDishItem = (props) => {
   const url =
     "http://63.142.251.101:3000/" + props.foodChef.dish_masters[0].dishImage;
