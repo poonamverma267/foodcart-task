@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
-import "./Carousel.css";
+
 import Glide from "@glidejs/glide";
-import CarouselItem from "./CarouselItem";
+import PopularDishItem from "./PopularDishItem";
 // // Required Core Stylesheet
 import "/node_modules/@glidejs/glide/dist/css/glide.core.min.css";
 // // Optional Theme Stylesheet
 import "/node_modules/@glidejs/glide/dist/css/glide.theme.min.css";
+import "./PopularDish.css";
 
 const sliderConfiguration = {
   gap: 20,
@@ -14,7 +15,10 @@ const sliderConfiguration = {
   type: "slider",
 };
 
-const Carousel = (props) => {
+const PopularDish = (props) => {
+  const dishList = props.PopFood.map((food) => (
+    <PopularDishItem key={food.chefid} foodChef={food} />
+  ));
   const slider = new Glide(".glide", sliderConfiguration);
 
   useEffect(() => {
@@ -29,11 +33,7 @@ const Carousel = (props) => {
       </div>
       <div className="glide">
         <div className="glide__track" data-glide-el="track">
-          <ul className="glide__slides">
-            {props.PopFood.map((food) => (
-              <CarouselItem key={food.chefid} foodChef={food} />
-            ))}
-          </ul>
+          <ul className="glide__slides">{dishList}</ul>
         </div>
         <div className="glide__arrows" data-glide-el="controls">
           <button
@@ -54,4 +54,4 @@ const Carousel = (props) => {
   );
 };
 
-export default Carousel;
+export default PopularDish;
