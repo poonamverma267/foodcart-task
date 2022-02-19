@@ -22,7 +22,10 @@ const PopularDish = (props) => {
   const slider = new Glide(".glide", sliderConfiguration);
 
   useEffect(() => {
-    return () => slider.mount();
+    slider.mount();
+    return () => {
+      slider.destroy();
+    };
   }, [slider]);
 
   return (
