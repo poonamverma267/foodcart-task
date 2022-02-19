@@ -95,10 +95,10 @@ a {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  padding: 5rem 0 2rem 0;
+  padding: 3rem 0 2rem 0;
 }
 .social li {
-  margin: 0 1em 0 0;
+  margin: 0;
   border: 0;
   font: inherit;
   vertical-align: baseline;
@@ -106,6 +106,10 @@ a {
   padding: 0.5rem 1rem;
 }
 
-.red {
+a:hover {
   color: red;
+}
+
+.logo {
+  padding-top: 2rem;
 }

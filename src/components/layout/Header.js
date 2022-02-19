@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import classes from "./Header.module.css";
+import logo from "../assets/images/logo.svg";
 
 const Header = (props) => {
   // const [btnIsHighlighted, setBtnIsHighlighted] = useState(false);
@@ -15,10 +16,12 @@ const Header = (props) => {
           </span>
         </section>
         <section className={classes.secondsection}>
-          <span className={classes.spanone}>Logo</span>
+          <span className={classes.spanone}>
+            <img src={logo} alt="logo" height="40rem" width="25rem" />
+          </span>
           <span className={classes.spantwo}></span>
-          <span >
-            <span >
+          <span>
+            <span>
               <button className={classes.btn1} onClick={props.onClick}>
                 Become a Chef
               </button>

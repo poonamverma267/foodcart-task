@@ -1,9 +1,13 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import classes from "./FooterStyles.module.css";
+import logo from "../assets/images/logo.svg";
 
 const Footer = () => {
   return (
     <footer className={classes.footer}>
+      <p className={classes.logo}>
+        <img src={logo} alt="logo" height="80rem" width="60rem" />
+      </p>
       <ul className={classes.social}>
         <li>
           <FaFacebook />
@@ -17,7 +21,7 @@ const Footer = () => {
       </ul>
       <ul className={classes.footermenu}>
         <li>
-          <a href="#" className={classes.red}>
+          <a href="#" className={classes.a1}>
             Home
           </a>
         </li>
